@@ -21,9 +21,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
-      # used for debugging
-      - 5858:5858
-    # share network
     volumes:
       - ./config/:/data/config/
       - ./controllers/:/data/controllers/

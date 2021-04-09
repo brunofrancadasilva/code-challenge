@@ -1,0 +1,35 @@
+# docker-compose: used exclusively in DEV
+#
+# usage:
+# $ docker-compose up
+#
+# done?
+# $ docker-compose down
+#
+# want to see logs?
+# $ docker-compose logs -f [service_name]
+#
+# example:
+# $ docker-compose logs -f api
+
+version: "3"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+      # used for debugging
+      - 5858:5858
+    # share network
+    volumes:
+      - ./config/:/data/config/
+      - ./controllers/:/data/controllers/
+      - ./managers/:/data/managers/
+      - ./routes/:/data/routes/
+      - ./services/:/data/services/
+      - ./app.js:/data/app.js
+      - ./package.json:/data/package.json
+    working_dir: /data

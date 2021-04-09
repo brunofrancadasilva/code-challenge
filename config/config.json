@@ -1,0 +1,12 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "constants": {
+    "yelp": {
+      "apiKey": "jIYikF5b017fm3cn5NxhoblCF7Q-WkSabcJnDOaQv8UNDGXGNhDC0XPcPdI3dRac2QBNx8t2RFxwYuG3vz8BZWCvoIubYtHF3m2Vb9Si_EZ4fxdo4MT07Yp6WptvYHYx",
+      "businessesUrl": "https://api.yelp.com/v3/businesses/search",
+      "businessReviewUrl": "https://api.yelp.com/v3/businesses/{0}/reviews"
+    }
+  }
+}
